@@ -30,7 +30,7 @@ r1
 Z3 o-work work
 n@adder1
 vAddSub
-Z4 !s110 1509350843
+Z4 !s110 1509383642
 !i10b 1
 !s100 _1Pc`LXiKM;@dgW244mkD3
 IK3]87jZ0kmi87R7110Um50
@@ -44,7 +44,7 @@ R2
 r1
 !s85 0
 31
-Z9 !s108 1509350843.429000
+Z9 !s108 1509383642.819000
 Z10 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/alu.v|
 Z11 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/alu.v|
 !i113 1
@@ -72,27 +72,27 @@ R11
 R3
 n@a@l@u
 vcpu
-R4
+Z12 !s110 1509383643
 !i10b 1
 !s100 4Lc7_;AL<^3^dS7EhXk_N0
 IgNkIElaRzGM6U;M0T=1eb2
 R1
 R5
-Z12 w1509350839
-Z13 8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu.v
-Z14 FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu.v
+Z13 w1509350839
+Z14 8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu.v
+Z15 FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu.v
 L0 3
 R2
 r1
 !s85 0
 31
-Z15 !s108 1509350843.774000
-Z16 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu.v|
-Z17 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu.v|
+Z16 !s108 1509383643.130000
+Z17 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu.v|
+Z18 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu.v|
 !i113 1
 R3
 vcpu_autograder_example_tb
-Z18 !s110 1509350844
+R12
 !i10b 1
 !s100 Z][bA]95aHIjYU^Io^W091
 IACULhFo_EDTo8ml@T;R^I3
@@ -106,13 +106,13 @@ R2
 r1
 !s85 0
 31
-!s108 1509350844.116000
+!s108 1509383643.383000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb_autograder_example.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb_autograder_example.v|
 !i113 1
 R3
 vdatapath
-R18
+R12
 !i10b 1
 !s100 ^DjJ9CcHO:E>WYZbPzo0[1
 IoU9[ii9^g_CWH3lSiF<bC3
@@ -126,13 +126,13 @@ R2
 r1
 !s85 0
 31
-!s108 1509350844.246000
+!s108 1509383643.494000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/datapath.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/datapath.v|
 !i113 1
 R3
 vDEC
-Z20 !s110 1509350845
+Z20 !s110 1509383644
 !i10b 1
 !s100 nE[hTI:RZDXILBP@BOMDE3
 IBf;2=3>C7TAO_cDJn5UFe1
@@ -146,14 +146,14 @@ R2
 r1
 !s85 0
 31
-Z23 !s108 1509350845.336000
+Z23 !s108 1509383644.447000
 Z24 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/regfile.v|
 Z25 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/regfile.v|
 !i113 1
 R3
 n@d@e@c
 vEqComp
-R18
+R12
 !i10b 1
 !s100 dnm?NNC2G_3260[T]3AmC1
 I;nfc7JG@ZlVU6iNVIEBNJ0
@@ -167,14 +167,14 @@ R2
 r1
 !s85 0
 31
-Z28 !s108 1509350844.650000
+Z28 !s108 1509383643.889000
 Z29 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/interface_to_memory.v|
 Z30 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/interface_to_memory.v|
 !i113 1
 R3
 n@eq@comp
 vinput_iface
-R18
+R20
 !i10b 1
 !s100 hN^n`G5NZ]IfjX8:;[N@S0
 I;]VhhU^[oe2[PU[GHi2?61
@@ -188,34 +188,34 @@ R2
 r1
 !s85 0
 31
-Z33 !s108 1509350844.780000
+Z33 !s108 1509383644.002000
 Z34 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab6_top.v|
 Z35 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab6_top.v|
 !i113 1
 R3
 vinstructionDecoder
-R4
+R12
 !i10b 1
 !s100 09iRCke3FmWdTa2Ggz:cg3
 ITm:aame6M8:H2NCN1_Bd02
 R1
 R5
-R12
 R13
 R14
+R15
 L0 52
 R2
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 1
 R3
 ninstruction@decoder
 vinterface_to_memory
-R18
+R12
 !i10b 1
 !s100 5T:bfLNV=4?P?ZU>lN@jc2
 I>>XjPJg]T49YII;=E<YIb3
@@ -275,7 +275,7 @@ r1
 !i113 1
 R3
 vlab7_top
-R18
+R20
 !i10b 1
 !s100 O:`:ZAO7oIV3lb>`dWaK43
 I72dJzoN7iBOXNfMHHhP_l2
@@ -295,7 +295,7 @@ R35
 !i113 1
 R3
 vlab7_top_tb
-Z38 !s110 1509350846
+!s110 1509383645
 !i10b 1
 !s100 bnHkMYB]j184m3^bZjbIF3
 IKY4_K?aPD_ZUd[4^e]jEj2
@@ -309,7 +309,7 @@ R2
 r1
 !s85 0
 31
-!s108 1509350846.121000
+!s108 1509383645.062000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab7_top_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab7_top_tb.v|
 !i113 1
@@ -329,7 +329,7 @@ R2
 r1
 !s85 0
 31
-!s108 1509350845.083000
+!s108 1509383644.236000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/MEM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/MEM.v|
 !i113 1
@@ -343,16 +343,16 @@ IOY?[c0Ud_o0034mba46hP2
 R1
 R5
 R19
-Z39 8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v
-Z40 FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v
+Z38 8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v
+Z39 FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v
 L0 1
 R2
 r1
 !s85 0
 31
-Z41 !s108 1509350845.851000
-Z42 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v|
-Z43 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v|
+Z40 !s108 1509383644.830000
+Z41 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v|
+Z42 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v|
 !i113 1
 R3
 nmem_mapped_io_@l@e@d
@@ -364,27 +364,27 @@ Imano_2`hNM61WbQ=fJIYX0
 R1
 R5
 R19
+R38
 R39
-R40
 L0 23
 R2
 r1
 !s85 0
 31
+R40
 R41
 R42
-R43
 !i113 1
 R3
 nmem_mapped_io_@s@w
 vmultiplexer2
-R38
+R20
 !i10b 1
-!s100 ES1Pk?5f=3SNVSTMmH?7K2
-I[i@g@`eKf=4O9?aSTiAI<0
+!s100 k1dSm^4f;EKIafWzPb7:L2
+IETPTV?HbTP8?`W9YbmFJ81
 R1
 R5
-R19
+Z43 w1509383633
 Z44 8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/prog_count.v
 Z45 FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/prog_count.v
 L0 16
@@ -392,7 +392,7 @@ R2
 r1
 !s85 0
 31
-Z46 !s108 1509350845.993000
+Z46 !s108 1509383644.947000
 Z47 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/prog_count.v|
 Z48 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/prog_count.v|
 !i113 1
@@ -482,13 +482,13 @@ R25
 R3
 n@m@u@x8
 vprog_count
-R38
+R20
 !i10b 1
 !s100 T=[DQSXzi6_>l:YP<A71X3
 IeW?bn<Q9@9RAMfaYOhYXW2
 R1
 R5
-R19
+R43
 R44
 R45
 L0 1
@@ -516,7 +516,7 @@ R2
 r1
 !s85 0
 31
-!s108 1509350845.204000
+!s108 1509383644.338000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/RAM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/RAM.v|
 !i113 1
@@ -558,7 +558,7 @@ R2
 r1
 !s85 0
 31
-!s108 1509350845.680000
+!s108 1509383644.708000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter.v|
 !i113 1
@@ -578,13 +578,13 @@ R2
 r1
 !s85 0
 31
-!s108 1509350843.293000
+!s108 1509383642.712000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter_tb.v|
 !i113 1
 R3
 vsseg
-R18
+R20
 !i10b 1
 !s100 ;;NPh3KMDMHeb_N8EeY@E3
 IfIog6mD`c67_mmij:WI2k3
@@ -604,28 +604,28 @@ R35
 !i113 1
 R3
 vstateMachine
-R4
+R12
 !i10b 1
 !s100 jO1MSIG`Q2mGRQ[99zMQM1
 Illl@ZK>^An@43^@JCJmQ73
 R1
 R5
-R12
 R13
 R14
+R15
 R49
 R2
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 1
 R3
 nstate@machine
 vtestalu
-R4
+R12
 !i10b 1
 !s100 WH@^8NAo6kg1aCW>4Jkoo1
 In;VgNYAUARU_KE`Q>JOOd2
@@ -639,13 +639,13 @@ R2
 r1
 !s85 0
 31
-!s108 1509350843.576000
+!s108 1509383643.001000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/alu_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/alu_tb.v|
 !i113 1
 R3
 vtestcpu
-R4
+R12
 !i10b 1
 !s100 V<?cG8A:cRFc00d8FQz3Z1
 INhk7E_F;JkXDhBEU^Ezm`1
@@ -659,13 +659,13 @@ R2
 r1
 !s85 0
 31
-!s108 1509350843.921000
+!s108 1509383643.255000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb.v|
 !i113 1
 R3
 vtestdatapath
-R18
+R12
 !i10b 1
 !s100 GgJ::c@;KCb>]7MR5P0PW3
 I8[6:4?gP1<XPSUJk<;PLk2
@@ -679,13 +679,13 @@ R2
 r1
 !s85 0
 31
-!s108 1509350844.383000
+!s108 1509383643.603000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/datapath_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/datapath_tb.v|
 !i113 1
 R3
 vtestfsm
-R18
+R12
 !i10b 1
 !s100 nCQP5e1=jO1Qg]hhImk^^3
 IbTJh3R@A[0XM=Cm:1Z@c50
@@ -699,13 +699,13 @@ R2
 r1
 !s85 0
 31
-!s108 1509350844.529000
+!s108 1509383643.717000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/fsm_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/fsm_tb.v|
 !i113 1
 R3
 vtestlab6
-R18
+R20
 !i10b 1
 !s100 @13DzD@8e;bCAdF1ZTdOn0
 ILzBdnkaLD5eABdkkhhang1
@@ -719,7 +719,7 @@ R2
 r1
 !s85 0
 31
-!s108 1509350844.947000
+!s108 1509383644.125000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab6_top_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab6_top_tb.v|
 !i113 1
@@ -739,13 +739,13 @@ R2
 r1
 !s85 0
 31
-!s108 1509350845.480000
+!s108 1509383644.576000
 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/regfile_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/regfile_tb.v|
 !i113 1
 R3
 vvDFF
-R18
+R20
 !i10b 1
 !s100 _g@0D]5eakDZejL7QSWk[0
 I<@k1L_V=@<V[i7hc_FMRk0

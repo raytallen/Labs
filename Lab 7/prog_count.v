@@ -14,7 +14,7 @@ endmodule
 
 /* BINARY MULTIPLEXER */
 module multiplexer2 (a1, a0, s, b);
-    parameter k = 16;
+    parameter k = 9;
     input [k-1:0] a0, a1; //inputs
     input s; //binary select
     output reg [k-1:0] b;
