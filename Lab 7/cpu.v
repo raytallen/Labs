@@ -5,8 +5,8 @@ module cpu(clk,reset,s,load,out,N,V,Z,w,mem_cmd,mem_addr,read_data);
   input [15:0] read_data;
   output [15:0] out;
   output N, V, Z, w;
-	output [1:0] mem_cmd;
-	output [8:0] mem_addr;
+  output [1:0] mem_cmd;
+  output [8:0] mem_addr;
   
   wire [15:0] instregout, sximm5, sximm8;  
   wire [2:0] opcode, readnum, writenum, nsel;  
@@ -152,8 +152,8 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 					else 
 						next_state = 4'bxxxxx;
 			`s10: if(op == 2'b10)
-			next_state = `s11; //writeReg state
-					else if (op == 2'b00)
+				next_state = `s11; //writeReg state
+				else if (op == 2'b00)
 			next_state = `s12; //loadb state
 			`s12: next_state = `s13; //add state (asel = 0)
 			`s13: next_state = `s14; //writeReg state
@@ -220,7 +220,7 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 				nsel = 3'b000;  write = 1'b0; 
 				loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
 				//in state 2 we are just checking for opcode so no outputs necessary
-				addr_sel=1'b0; mem_cmd=2'b00; load_pc=1'b0; load_ir=1'b1;
+				addr_sel=1'b0; mem_cmd=2'b00; load_pc=1'b0; load_ir=1'b0;
 			end
 
 			`s10: begin // start of mov branch
