@@ -21,8 +21,8 @@ module lab7_top_tb();
     KEY[1] = 0; #5;
     KEY[1] = 1; #5;
     KEY[2] = 1; #5;
-    KEY[2] = 0; #50;
-    KEY[2] = 1; #5;
+    KEY[2] = 0; #30;
+    KEY[2] = 0; #5;
   end
 
 endmodule

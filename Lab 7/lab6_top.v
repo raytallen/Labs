@@ -47,7 +47,7 @@ module lab7_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
 
   wire [15:0] out, in;
   wire [15:0] read_data, write_data;
-  wire [9:0] mem_addr;
+  wire [8:0] mem_addr;
   wire [1:0] mem_cmd;
   input_iface IN(CLOCK_50, SW, in, LEDR[7:0]);
 
@@ -56,7 +56,7 @@ module lab7_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
          .reset (~KEY[1]), 
          .s     (~KEY[2]),
          .load  (~KEY[3]),
-         write_data,
+         .out (write_data),
          .Z     (Z),
          .N     (N),
          .V     (V),
@@ -67,7 +67,7 @@ module lab7_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
   assign HEX5[6] = ~N;
   assign HEX5[3] = ~V;
 
-  MEM MEM((~KEY[0]), mem_addr[7:0], mem_cmd, write_data, read_data);
+  MEM MEM((~KEY[0]), mem_addr[8:0], mem_cmd, write_data, read_data);
 
   // fill in sseg to display 4-bits in hexidecimal 0,1,2...9,A,B,C,D,E,F
   sseg H0(out[3:0],   HEX0);

@@ -44,7 +44,7 @@ module cpu(clk,reset,s,load,out,N,V,Z,w,mem_cmd,mem_addr,read_data);
   datapath DP(clk, readnum, vsel, loada, loadb, shift, asel, bsel, ALUop, loadc, loads, 
                 writenum, write, mdata, sximm8, sximm5, PC, statusout, out);
 	prog_count prog(load_pc,reset_pc,PC_out);
-	multiplexer2 mux2(PC_out,9'b0,addr_sel,mem_addr);
+	multiplexer2 #(9) mux2(PC_out,9'b0,addr_sel,mem_addr);
 
  endmodule
 
@@ -125,8 +125,13 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 
   always@(posedge clk) begin 
     if (reset) begin 
+	
 			present_state = `sReset;  // if reset is 1, go to state 1 - Wait state 
 			next_state = `sReset; 
+			reset_pc = 1'b1;
+			loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b00;
+			addr_sel=1'b1; mem_cmd=2'b00; load_pc=1'b1; load_ir=1'b0;
+
     end else begin 
 		case(present_state) 
 			`sIF1:
@@ -145,7 +150,7 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 					else if (opcode == 3'b101)
 						next_state = `s3; // getA state: first state of ALU branch 
 					else 
-						next_state = 4'bxxxx;
+						next_state = 4'bxxxxx;
 			`s10: if(op == 2'b10)
 			next_state = `s11; //writeReg state
 					else if (op == 2'b00)
@@ -164,13 +169,13 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 					else if (op == 2'b11) 
 			next_state = `s8; // NOT state 
 					else 
-			next_state = 4'bxxxx; 
+			next_state = 4'bxxxxx; 
 			`s5: next_state = `s9; // writeReg state: all ALU operations go to state 10 
 			`s6: next_state = `s9; //unconditionally move from any calculation state to writeRegC state
 			`s7: next_state = `s9; 
 			`s8: next_state = `s9;  
 			`s9: next_state = `sIF1; //after writiting calculation, moves back to wait state
-			default: next_state = 4'bxxxx; 
+			default: next_state = 4'bxxxxx; 
 		endcase
 
 		present_state = next_state; 
@@ -215,7 +220,7 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 				nsel = 3'b000;  write = 1'b0; 
 				loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
 				//in state 2 we are just checking for opcode so no outputs necessary
-				addr_sel=1'b0; mem_cmd=2'b00; load_pc=1'b0; load_ir=1'b0;
+				addr_sel=1'b0; mem_cmd=2'b00; load_pc=1'b0; load_ir=1'b1;
 			end
 
 			`s10: begin // start of mov branch
