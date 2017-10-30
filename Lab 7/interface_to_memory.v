@@ -1,9 +1,9 @@
 
-module interface_to_memory(mread,mwrite,mem_cmd,mem_addr,data_in,data_out,write_out)
+module interface_to_memory(mread,mwrite,mem_cmd,mem_addr,data_in,data_out,write_out);
 
     input [15:0] data_in;
     input mem_addr;
-    input [1:0] mread, mwrite;
+    input [1:0] mread, mwrite,mem_cmd;
     output [15:0] data_out;
     output write_out;
     wire msel,isread_out,tridriver,iswrite_out;
@@ -15,7 +15,7 @@ module interface_to_memory(mread,mwrite,mem_cmd,mem_addr,data_in,data_out,write_
     assign tridriver = msel & isread_out;
 
     // TRI STATE DRIVER
-    assign data_out = tridriver ? data_in : 16’bzzzzzzzzzzzzzzzz;
+    assign data_out = tridriver ? data_in : 'bzzzzzzzzzzzzzzzz;
 
     assign write_out = iswrite_out & msel;
 

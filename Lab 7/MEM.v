@@ -1,9 +1,10 @@
 
-module MEM(clk, mem_addr, mem_cmd, write_data, data_out)
+module MEM(clk, mem_addr, mem_cmd, write_data, data_out);
     
     input [15:0] write_data;
     input [8:0] mem_addr;
     wire [1:0] mread, mwrite;
+    input [1:0] mem_cmd;
     input clk;
     output [15:0] data_out; 
     wire write_out;
