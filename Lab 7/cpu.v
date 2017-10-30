@@ -112,150 +112,150 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 
   always@(posedge clk) begin 
     if (reset) begin 
-	present_state = `s1;  // if reset is 1, go to state 1 - Wait state 
-	next_state = `s1; 
+			present_state = `s1;  // if reset is 1, go to state 1 - Wait state 
+			next_state = `s1; 
     end else begin 
-	case(present_state) 
-	  `s1: if (s) // wait state
-		next_state = `s2; // wait for s to move to decode state 
-	       else 
-		next_state = `s1; 
- 	  `s2: if (opcode == 3'b110) // decode state: move or ALU 
-		next_state = `s10;  // Move branch	
-	       else if (opcode == 3'b101)
-		next_state = `s3; // getA state: first state of ALU branch 
-	       else 
-		next_state = 4'bxxxx;
-	  `s10: if(op == 2'b10)
-		next_state = `s11; //writeReg state
-		    else if (op == 2'b00)
-		next_state = `s12; //loadb state
-	  `s12: next_state = `s13; //add state (asel = 0)
-	  `s13: next_state = `s14; //writeReg state
-	  `s14: next_state = `s1; //end of mov (op == 00) branch
-	  `s11: next_state = `s1; //end of mov (op == 10) branch
-	  `s3: next_state = `s4; // getB state 
-	  `s4: if (op == 2'b00) 
-		next_state = `s5; // add state
-	       else if (op == 2'b01)  
-		next_state = `s6; // subtraction state 
-	       else if (op == 2'b10) 
-		next_state = `s7; // AND state 
-	       else if (op == 2'b11) 
-		next_state = `s8; // NOT state 
-	       else 
-		next_state = 4'bxxxx; 
-	  `s5: next_state = `s9; // writeReg state: all ALU operations go to state 10 
-	  `s6: next_state = `s9; //unconditionally move from any calculation state to writeRegC state
-	  `s7: next_state = `s9; 
-	  `s8: next_state = `s9;  
-	  `s9: next_state = `s1; //after writiting calculation, moves back to wait state
-	  default: next_state = 4'bxxxx; 
-	endcase
-  	present_state = next_state; 
-	case (present_state) 
-	  `s1: begin // wait state
-	    w = ~s; // turn w signal to on if we are in the wait state and the start ("s") signal is off
-	    nsel = 3'b000;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b00;
-		//in state one we want to reset everything just in case
-	  end 
-	  `s2: begin // decode state 
-	    w = 1'b0; 
-	    nsel = 3'b000;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
-		//in state 2 we are just checking for opcode so no outputs necessary
+		case(present_state) 
+			`s1: if (s) // wait state
+			next_state = `s2; // wait for s to move to decode state 
+					else 
+			next_state = `s1; 
+			`s2: if (opcode == 3'b110) // decode state: move or ALU 
+			next_state = `s10;  // Move branch	
+					else if (opcode == 3'b101)
+			next_state = `s3; // getA state: first state of ALU branch 
+					else 
+			next_state = 4'bxxxx;
+			`s10: if(op == 2'b10)
+			next_state = `s11; //writeReg state
+					else if (op == 2'b00)
+			next_state = `s12; //loadb state
+			`s12: next_state = `s13; //add state (asel = 0)
+			`s13: next_state = `s14; //writeReg state
+			`s14: next_state = `s1; //end of mov (op == 00) branch
+			`s11: next_state = `s1; //end of mov (op == 10) branch
+			`s3: next_state = `s4; // getB state 
+			`s4: if (op == 2'b00) 
+			next_state = `s5; // add state
+					else if (op == 2'b01)  
+			next_state = `s6; // subtraction state 
+					else if (op == 2'b10) 
+			next_state = `s7; // AND state 
+					else if (op == 2'b11) 
+			next_state = `s8; // NOT state 
+					else 
+			next_state = 4'bxxxx; 
+			`s5: next_state = `s9; // writeReg state: all ALU operations go to state 10 
+			`s6: next_state = `s9; //unconditionally move from any calculation state to writeRegC state
+			`s7: next_state = `s9; 
+			`s8: next_state = `s9;  
+			`s9: next_state = `s1; //after writiting calculation, moves back to wait state
+			default: next_state = 4'bxxxx; 
+		endcase
+			present_state = next_state; 
+		case (present_state) 
+			`s1: begin // wait state
+				w = ~s; // turn w signal to on if we are in the wait state and the start ("s") signal is off
+				nsel = 3'b000;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b00;
+			//in state one we want to reset everything just in case
+			end 
 
-	  end
-	  `s10: begin // start of mov branch
-	    w = 1'b0; 
-	    nsel = 3'b000;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
-		//start of mov branch and checks for op - no outputs
-	    
-	  end 
-	  `s3: begin // getA state 
-	    w = 1'b0; 
-	    nsel = 3'b001;  write = 1'b0; 
-	    loada = 1'b1; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
-	  	//we need to loada to be on to enable loadA register
-		//nsel is 3'b001 to choose Rn to make readnum be the value of the register we want to read from for loadA
-	  end 
-	  `s4: begin // getB state 
-	    w = 1'b0; 
-	    nsel = 3'b100;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b1; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
-	  	//need loadb to be on to enable loadB register
-		//nsel is 3'b100 to select Rm to set readnum to be the value of the register we want to read from for loadB
-	  end 
-	  `s5: begin // add state 
-	    w = 1'b0; 
-	    nsel = 3'b000;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
-	  	//calculation state - loads/loadc on
+			`s2: begin // decode state 
+				w = 1'b0; 
+				nsel = 3'b000;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
+			//in state 2 we are just checking for opcode so no outputs necessary
+			end
 
-	  end 
-	  `s6: begin // subtraction state 
-	    w = 1'b0; 
-	    nsel = 3'b000;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b1; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
-	  	//calculation state - loads/loadc on
-	
-	  end 
-	  `s7: begin // AND state 
-	    w = 1'b0; 
-	    nsel = 3'b000;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
-	  	//calculation state - loads/loadc on
+			`s10: begin // start of mov branch
+				w = 1'b0; 
+				nsel = 3'b000;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
+			//start of mov branch and checks for op - no outputs	
+			end 
 
-	  end 
-	  `s8: begin // NOT state
-	    w = 1'b0; 
-	    nsel = 3'b000;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
-	  	//calculation state - loads/loadc on
-	    
-	  end 
-	  `s9: begin // writeReg C
-            w = 1'b0; 
-	    nsel = 3'b010;  write = 1'b1; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b00;
-		//nsel is set to Rd to set writenum to the register value we want to set our calculated value to
-		
-	  end
-	  `s11: begin //writeReg 
-            w = 1'b0; 
-	    nsel = 3'b001;  write = 1'b1; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b10;
-		//set nsel to 001 so the writenum is set to Rn so immediate value inputted goes the register that we input
-		
-	  end
-	  `s12: begin //loadB state in mov branch
-            w = 1'b0; 
-	    nsel = 3'b100;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b1; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
-		//set nsel to 100 so writenum gets the value of Rm so loadB reads from the register indicated with Rm
-		
-	  end
-	  `s13: begin //add state (asel = 1)
-           w = 1'b0; 
-	    nsel = 3'b000;  write = 1'b0; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b0; asel = 1'b1; bsel = 1'b0; vsel = 2'bxx;
-		//calculation state - loada/loadc on
-		//set asel to 1 so we add 0 to B so we can output B by itself
-		
-	  end 
-	  `s14: begin //writeReg state in mov branch
-            w = 1'b0; 
-	    nsel = 3'b010;  write = 1'b1; 
-	    loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b00;
-		//nsel set to Rd so the output gets written to register indicated by Rd (write = value of Rd)
-		
-	  end
-		
-	  endcase 
-       end 
+			`s3: begin // getA state 
+				w = 1'b0; 
+				nsel = 3'b001;  write = 1'b0; 
+				loada = 1'b1; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
+				//we need to loada to be on to enable loadA register
+			//nsel is 3'b001 to choose Rn to make readnum be the value of the register we want to read from for loadA
+			end 
+
+			`s4: begin // getB state 
+				w = 1'b0; 
+				nsel = 3'b100;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b1; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
+				//need loadb to be on to enable loadB register
+			//nsel is 3'b100 to select Rm to set readnum to be the value of the register we want to read from for loadB
+			end 
+			
+			`s5: begin // add state 
+				w = 1'b0; 
+				nsel = 3'b000;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
+				//calculation state - loads/loadc on
+			end 
+
+			`s6: begin // subtraction state 
+				w = 1'b0; 
+				nsel = 3'b000;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b1; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
+				//calculation state - loads/loadc on
+			end
+
+			`s7: begin // AND state 
+				w = 1'b0; 
+				nsel = 3'b000;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
+				//calculation state - loads/loadc on
+			end 
+
+			`s8: begin // NOT state
+				w = 1'b0; 
+				nsel = 3'b000;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
+				//calculation state - loads/loadc on	
+			end 
+
+			`s9: begin // writeReg C
+							w = 1'b0; 
+				nsel = 3'b010;  write = 1'b1; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b00;
+			//nsel is set to Rd to set writenum to the register value we want to set our calculated value to
+			end
+
+			`s11: begin //writeReg 
+							w = 1'b0; 
+				nsel = 3'b001;  write = 1'b1; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b10;
+			//set nsel to 001 so the writenum is set to Rn so immediate value inputted goes the register that we input
+			end
+
+			`s12: begin //loadB state in mov branch
+							w = 1'b0; 
+				nsel = 3'b100;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b1; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'bxx;
+			//set nsel to 100 so writenum gets the value of Rm so loadB reads from the register indicated with Rm
+			end
+
+			`s13: begin //add state (asel = 1)
+						w = 1'b0; 
+				nsel = 3'b000;  write = 1'b0; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b1; loads = 1'b0; asel = 1'b1; bsel = 1'b0; vsel = 2'bxx;
+			//calculation state - loada/loadc on
+			//set asel to 1 so we add 0 to B so we can output B by itself
+			end 
+
+			`s14: begin //writeReg state in mov branch
+							w = 1'b0; 
+				nsel = 3'b010;  write = 1'b1; 
+				loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b00;
+			//nsel set to Rd so the output gets written to register indicated by Rd (write = value of Rd)
+			end
+			endcase 
+    end 
    end
-
 endmodule
   
