@@ -96,7 +96,6 @@ endmodule
 `define sUpdatePC 5'b10010
 `define sReset 5'b10011
 
-
 // state machine module 
 module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loadc, loads, asel, bsel, vsel); 
   parameter n = 3; // width of nsel signal 
@@ -169,7 +168,13 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 			//in state one we want to reset everything just in case
 			end 
 
-			`s
+			`sIF1: begin //IF1 State
+
+			end
+
+			`sIF2: begin //IF2 State
+
+			end
 
 			`s2: begin // decode state 
 				w = 1'b0; 
