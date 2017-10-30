@@ -75,20 +75,26 @@ module instructionDecoder(instregout, nsel, ALUop, sximm5, sximm8, shift, readnu
   assign sximm8 = {imm8[7],imm8[7],imm8[7],imm8[7],imm8[7],imm8[7],imm8[7],imm8[7],imm8[7:0]};
 endmodule 
 
-`define s1 4'b0000			//definitions used for future reference
-`define s2 4'b0001
-`define s3 4'b0010
-`define s4 4'b0011
-`define s5 4'b0100
-`define s6 4'b0101
-`define s7 4'b0110
-`define s8 4'b0111
-`define s9 4'b1000
-`define s10 4'b1001
-`define s11 4'b1010
-`define s12 4'b1011
-`define s13 4'b1100
-`define s14 4'b1101
+`define s1 5'b00000			//definitions used for future reference
+`define s2 5'b00001
+`define s3 5'b00010
+`define s4 5'b00011
+`define s5 5'b00100
+`define s6 5'b00101
+`define s7 5'b00110
+`define s8 5'b00111
+`define s9 5'b01000
+`define s10 5'b01001
+`define s11 5'b01010
+`define s12 5'b01011
+`define s13 5'b01100
+`define s14 5'b01101
+
+//States added Lab 7
+`define sIF1 5'b10000
+`define sIF2 5'b10001
+`define sUpdatePC 5'b10010
+`define sReset 5'b10011
 
 
 // state machine module 
@@ -152,7 +158,9 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 			`s9: next_state = `s1; //after writiting calculation, moves back to wait state
 			default: next_state = 4'bxxxx; 
 		endcase
+
 			present_state = next_state; 
+
 		case (present_state) 
 			`s1: begin // wait state
 				w = ~s; // turn w signal to on if we are in the wait state and the start ("s") signal is off
@@ -160,6 +168,8 @@ module stateMachine(s, reset, opcode, op, clk, w, nsel, write, loada, loadb, loa
 				loada = 1'b0; loadb = 1'b0; loadc = 1'b0; loads = 1'b0; asel = 1'b0; bsel = 1'b0; vsel = 2'b00;
 			//in state one we want to reset everything just in case
 			end 
+
+			`s
 
 			`s2: begin // decode state 
 				w = 1'b0; 
