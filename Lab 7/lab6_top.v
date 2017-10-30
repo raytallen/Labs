@@ -45,30 +45,29 @@ module lab7_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
   output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
   input CLOCK_50;
 
-  wire [15:0] out, ir;
+  wire [15:0] out, in;
   wire [15:0] read_data, write_data;
   wire [9:0] mem_addr;
   wire [1:0] mem_cmd;
-  input_iface IN(CLOCK_50, SW, ir, LEDR[7:0]);
+  input_iface IN(CLOCK_50, SW, in, LEDR[7:0]);
 
   wire Z, N, V;
   cpu U( .clk   (~KEY[0]), // recall from Lab 4 that KEY0 is 1 when NOT pushed
          .reset (~KEY[1]), 
          .s     (~KEY[2]),
          .load  (~KEY[3]),
-         .in    (ir),
-         .out   (out),
+         write_data,
          .Z     (Z),
          .N     (N),
          .V     (V),
-         .w     (LEDR[9]) 
-         mem_cmd,mem_addr,read_data); 
+         .w     (LEDR[9]), 
+         .mem_cmd (mem_cmd), .mem_addr (mem_addr), .read_data (read_data)); 
 
   assign HEX5[0] = ~Z;
   assign HEX5[6] = ~N;
   assign HEX5[3] = ~V;
 
-  MEM MEM(.clk(~KEY[0]), mem_addr[7:0], mem_cmd, write_data, read_data);
+  MEM MEM((~KEY[0]), mem_addr[7:0], mem_cmd, write_data, read_data);
 
   // fill in sseg to display 4-bits in hexidecimal 0,1,2...9,A,B,C,D,E,F
   sseg H0(out[3:0],   HEX0);
@@ -80,15 +79,15 @@ module lab7_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
   assign LEDR[8] = 1'b0;
 endmodule
 
-module input_iface(clk, SW, ir, LEDR);
+module input_iface(clk, SW, in, LEDR);
   input clk;
   input [9:0] SW;
-  output [15:0] ir;
+  output [15:0] in;
   output [7:0] LEDR;
   wire sel_sw = SW[9];  
-  wire [15:0] ir_next = sel_sw ? {SW[7:0],ir[7:0]} : {ir[15:8],SW[7:0]};
-  vDFF #(16) REG(clk,ir_next,ir);
-  assign LEDR = sel_sw ? ir[7:0] : ir[15:8];  
+  wire [15:0] ir_next = sel_sw ? {SW[7:0],in[7:0]} : {in[15:8],SW[7:0]};
+  vDFF #(16) REG(clk,ir_next,in);
+  assign LEDR = sel_sw ? in[7:0] : in[15:8];  
 endmodule         
 
 module vDFF(clk,D,Q);

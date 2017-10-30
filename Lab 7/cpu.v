@@ -1,6 +1,6 @@
 // cpu module 
 //load is load_ir
-module cpu(clk,reset,s,load,read_data,out,N,V,Z,w,mem_cmd,mem_addr,read_data);
+module cpu(clk,reset,s,load,out,N,V,Z,w,mem_cmd,mem_addr,read_data);
   input clk, reset, s, load;
   input [15:0] read_data;
   output [15:0] out;

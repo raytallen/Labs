@@ -43,7 +43,15 @@ Top level modules:
 	MUX4
 	registerFile
 
-} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/MEM.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/MEM.v}
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab6_top.v} {0 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab6_top.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module lab7_top
+** Error: C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab6_top.v(59): near "write_data": syntax error, unexpected IDENTIFIER, expecting .* or '.'
+-- Compiling module input_iface
+-- Compiling module vDFF
+-- Compiling module sseg
+
+} {4.0 5.0} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/MEM.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/MEM.v}
 Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
 -- Compiling module MEM
 
@@ -79,15 +87,6 @@ Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
 Top level modules:
 	RAM
 
-} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu.v} {1 {vlog -work work -stats=none {C:\Users\Ray Allen\OneDrive\Documents\School\2nd Year\CPEN 211\Lab Git\Labs\Lab 7\cpu.v}
-Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
--- Compiling module cpu
--- Compiling module instructionDecoder
--- Compiling module stateMachine
-
-Top level modules:
-	cpu
-
 } {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter_tb.v}
 Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
 -- Compiling module shifter_tb
@@ -118,6 +117,13 @@ Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
 Top level modules:
 	mem_mapped_io_LED
 	mem_mapped_io_SW
+
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab7_top_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab7_top_tb.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module lab7_top_tb
+
+Top level modules:
+	lab7_top_tb
 
 } {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter.v}
 Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
