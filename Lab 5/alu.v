@@ -1,13 +1,11 @@
 /* ALU
-Does arithmetic on two 16 bit input, depending on what ALUop input is
-
-
+    Does arithmetic on two 16 bit input, depending on what ALUop input is
 */
 module ALU(Ain, Bin, ALUop, out, status);
     input [15:0] Ain, Bin;
     input [1:0] ALUop;
     output reg [15:0] out;
-    output status;
+    output reg status;
     /*
     If ALUop == 00, add inputs
     If ALUop == 01, subtract inputs
@@ -21,5 +19,7 @@ module ALU(Ain, Bin, ALUop, out, status);
         2'b10: out = Ain & Bin;
         2'b11: out = ~Bin;
         endcase
+
+        
     end
 endmodule

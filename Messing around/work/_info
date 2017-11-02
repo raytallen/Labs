@@ -1,0 +1,334 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7
+vALU
+Z0 !s110 1509480669
+!i10b 1
+!s100 `]A?cabF0e1<?S1I[zz7D3
+IhCj^cJ>8aFEaYoJVUiji10
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around
+Z3 w1509480662
+Z4 8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/mini_modules.v
+Z5 FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/mini_modules.v
+L0 107
+Z6 OV;L;10.3d;59
+r1
+!s85 0
+31
+Z7 !s108 1509480668.999000
+Z8 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/mini_modules.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/mini_modules.v|
+!i113 1
+Z10 o-work work
+n@a@l@u
+vALU_TB
+R0
+!i10b 1
+!s100 d<=4QfnJKNOD0SAT?=]<G0
+IcYBlg`kOKbC6MR>Pnc@PU2
+R1
+R2
+R3
+R4
+R5
+L0 131
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@a@l@u_@t@b
+vdatapath
+Z11 !s110 1509480668
+!i10b 1
+!s100 SL6BRAfm1`e:fDWd:g[Rm0
+ITcCV`Tz22?F]fSddh0]=L2
+R1
+R2
+w1509479123
+8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath.v
+FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath.v
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1509480668.748000
+!s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath.v|
+!i113 1
+R10
+vdatapath_tb
+R0
+!i10b 1
+!s100 1VVBT:iOhoBI4V2DkW??62
+IzEAOg8lOL1e>gkeCdbU2m2
+R1
+R2
+w1509478095
+8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_tb.v
+FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1509480669.125000
+!s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_tb.v|
+!i113 1
+R10
+vdecoder
+R0
+!i10b 1
+!s100 bEPNlTI?;eGbcmL_^QC1z2
+Id^RgP]6CQ7J`6O@U2G`8Y2
+R1
+R2
+R3
+R4
+R5
+L0 64
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vinput_iface
+R11
+!i10b 1
+!s100 3GaC^SE=6@==4YmX[>N>H2
+IeKD99MbR^JCT=4QdA5AS53
+R1
+R2
+Z12 w1509478560
+Z13 8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_top.v
+Z14 FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_top.v
+L0 93
+R6
+r1
+!s85 0
+31
+Z15 !s108 1509480668.878000
+Z16 !s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_top.v|
+Z17 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_top.v|
+!i113 1
+R10
+vlab5_top
+R11
+!i10b 1
+!s100 PPSJGQ3;WQe8RaIn`6c100
+IGQV6jY`OR:IJim7kKoD3N1
+R1
+R2
+R12
+R13
+R14
+L0 39
+R6
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 1
+R10
+vmultiplexer2
+R0
+!i10b 1
+!s100 _AODTjT`di=fY;YIEP_240
+I`7HLZAKB9YJIeK@7niVba2
+R1
+R2
+R3
+R4
+R5
+L0 5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vmultiplexer8
+R0
+!i10b 1
+!s100 lZ5i`LXfIfiOgiXHHK8ie0
+IZ6]N7MU1EDf^QT^O9Vd<02
+R1
+R2
+R3
+R4
+R5
+L0 23
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vregister8_file_16bit
+R11
+!i10b 1
+!s100 aClDRN337b>U6W8fOKbR?0
+I9Rm?FRK3H9RWL9>o_9R^O2
+R1
+R2
+w1509385783
+8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile.v
+FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile.v
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1509480668.642000
+!s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile.v|
+!i113 1
+R10
+vregister8_file_16bit_tb
+R0
+!i10b 1
+!s100 >0lK`D[S:S<h<c6@K9U<53
+I4mzoC]IMCgz;Uo6jgm?W>1
+R1
+R2
+w1509478367
+8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile_tb.v
+FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile_tb.v
+L0 5
+R6
+r1
+!s85 0
+31
+!s108 1509480669.256000
+!s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile_tb.v|
+!i113 1
+R10
+vshifter16
+R0
+!i10b 1
+!s100 iM?aIY4`?TzL<6D7Y;GE^1
+I>gkAH@:E[Bd?AcbXJ4l`40
+R1
+R2
+R3
+R4
+R5
+L0 76
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vsseg
+R11
+!i10b 1
+!s100 0^`Wca7[5zYTnf2SFBK>@0
+In]VK7`9oRSDjK<nY:fZHa1
+R1
+R2
+R12
+R13
+R14
+L0 141
+R6
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 1
+R10
+vtestdatapath
+!s110 1509477997
+!i10b 1
+!s100 GgJ::c@;KCb>]7MR5P0PW3
+IhfUbTenbmI1<Oo4o:?`m32
+R1
+R2
+w1509477572
+8C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath_tb.v
+FC:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1509477997.631000
+!s107 C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath_tb.v|
+!i113 1
+R10
+vvDFF
+R11
+!i10b 1
+!s100 IKbQ1^94;XP8>Ti;aXmL@2
+I@TDBWo`4GoAKz^VmPBWRY1
+R1
+R2
+R12
+R13
+R14
+L0 130
+R6
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 1
+R10
+nv@d@f@f
+vvDFFE
+R0
+!i10b 1
+!s100 gmYKM]Xd5hP1D0KM^L6MP1
+I?S@LUEIn4>gZM0[LGLd1G2
+R1
+R2
+R3
+R4
+R5
+L0 45
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nv@d@f@f@e

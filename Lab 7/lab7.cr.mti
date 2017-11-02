@@ -111,6 +111,13 @@ Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
 Top level modules:
 	shifter_tb
 
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/regfile_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/regfile_tb.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module testreg
+
+Top level modules:
+	testreg
+
 } {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/interface_to_memory.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/interface_to_memory.v}
 Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
 -- Compiling module interface_to_memory
@@ -118,13 +125,6 @@ Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
 
 Top level modules:
 	interface_to_memory
-
-} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/regfile_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/regfile_tb.v}
-Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
--- Compiling module testreg
-
-Top level modules:
-	testreg
 
 } {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/mem_mapped_io.v}
 Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
@@ -135,19 +135,12 @@ Top level modules:
 	mem_mapped_io_LED
 	mem_mapped_io_SW
 
-} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb.v}
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab7_top_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab7_top_tb.v}
 Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
--- Compiling module testcpu
+-- Compiling module lab7_top_tb
 
 Top level modules:
-	testcpu
-
-} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb_autograder_example.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb_autograder_example.v}
-Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
--- Compiling module cpu_autograder_example_tb
-
-Top level modules:
-	cpu_autograder_example_tb
+	lab7_top_tb
 
 } {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/shifter.v}
 Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
@@ -156,11 +149,18 @@ Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
 Top level modules:
 	shifter
 
-} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab7_top_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/lab7_top_tb.v}
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb_autograder_example.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb_autograder_example.v}
 Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
--- Compiling module lab7_top_tb
+-- Compiling module cpu_autograder_example_tb
 
 Top level modules:
-	lab7_top_tb
+	cpu_autograder_example_tb
+
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Lab 7/cpu_tb.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module testcpu
+
+Top level modules:
+	testcpu
 
 } {} {}}

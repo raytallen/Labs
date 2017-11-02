@@ -1,0 +1,47 @@
+{C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/datapath.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile_tb.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module register8_file_16bit_tb
+
+Top level modules:
+	register8_file_16bit_tb
+
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/mini_modules.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/mini_modules.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module multiplexer2
+-- Compiling module multiplexer8
+-- Compiling module vDFFE
+-- Compiling module decoder
+-- Compiling module shifter16
+-- Compiling module ALU
+-- Compiling module ALU_TB
+
+Top level modules:
+	multiplexer2
+	multiplexer8
+	vDFFE
+	decoder
+	shifter16
+	ALU_TB
+
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_tb.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/lab5_tb.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module datapath_tb
+
+Top level modules:
+	datapath_tb
+
+} {} {}} {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile.v} {1 {vlog -work work -stats=none {C:/Users/Ray Allen/OneDrive/Documents/School/2nd Year/CPEN 211/Lab Git/Labs/Messing around/regfile.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module register8_file_16bit
+
+Top level modules:
+	register8_file_16bit
+
+} {} {}}
